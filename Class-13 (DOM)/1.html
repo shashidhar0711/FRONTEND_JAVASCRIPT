@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body-1">
+    <button id="btn-1">Say Hello</button>
+
+    <script>
+        let selectedButton = document.getElementById('btn-1')
+        console.log(selectedButton)
+
+        // event listner
+        selectedButton.addEventListener('click', function(){
+            let helloDiv = document.createElement('div')
+            helloDiv.innerText = 'Hello'
+
+            let bodyElement = document.getElementById('body-1')
+            console.log(bodyElement)
+
+            bodyElement.appendChild(helloDiv)
+        })
+    </script>
+
+</body>
+</html>
