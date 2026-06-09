@@ -3,9 +3,8 @@
 //     Returns a new string where the order of words is reversed.
 //     Example: "Hello world" → "world Hello".
 // Approach: Think of a way to convert the string into an array of words.
-
 function reverseWords(sentence) {
-    let words = sentence.split(" ")
+    let words = sentence.split(" ") // string to array
     console.log(words)
 
     let copyArray = []
@@ -14,9 +13,9 @@ function reverseWords(sentence) {
         copyArray.push(words.pop())
     }
 
-    return copyArray.join(" ")  
+    return copyArray.join(" ")  // array to string
 }
   
-  console.log(reverseWords("Hello world")); // "world Hello"
+  console.log(reverseWords("world")); // "world Hello"
   console.log(reverseWords("JavaScript is fun")); // "fun is JavaScript"
   console.log(reverseWords('Scaler Academy'))
