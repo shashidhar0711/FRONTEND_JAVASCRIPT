@@ -22,8 +22,9 @@ function sumAll(nums) {
 let finalAmount = sumAll(cartPrices);
 console.log(finalAmount);
 
-
-
+// Sum of all numbers by using reduce inbuilt function
+// REDUCE: Is used to reduce an array into single value
+// acc intialize with 0, value is the current value and keep adding them. return it
 let finalSum = cartPrices.reduce(function(acc, value){
     return acc = acc+value
 }, 0)

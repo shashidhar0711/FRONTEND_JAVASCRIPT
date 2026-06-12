@@ -21,15 +21,10 @@ let numsArr = [1 ,2 ,5 ,4 ,7 ,8 ,10 ,42 ,57 ,78]
 // condition , what we want to do
 
 
-
+// Filter the value and array
 let evenArray = numsArr.filter(function(num){
     return num%2==0
  })
 console.log(evenArray)
 
 console.log(numsArr)
-
-
-
-
-
