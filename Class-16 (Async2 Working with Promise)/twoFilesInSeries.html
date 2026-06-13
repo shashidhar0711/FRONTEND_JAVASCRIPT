@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script defer>
+        function fetchByCb(fileName, cb) {
+            setTimeout(function () {
+                cb(`content : ${fileName}`);
+            }, 100 * Math.random());
+        }
+    </script>
+    <!-- Write your code solution here, inside the twoSeries function -->
+    <!-- WARNING:
+        Don't make any changes outside the given function. (would fail test cases)
+        Write the required code and return the correct answer. -->
+    <script id='solution' defer>
+        function twoSeries(file1, file2, ansArray) {
+            //write your code here =========================================
+            
+                // write your code here
+                function cb1(content) {
+                    ansArray.push(content);
+                    // start next task
+                    fetchByCb(file2, cb2);
+                }
+
+                function cb2(content) {
+                    ansArray.push(content);
+                    ansArray.push("All files have been read");
+                }
+
+                fetchByCb(file1, cb1);
+            
+        }
+    </script>
+</body>
+
+</html>
